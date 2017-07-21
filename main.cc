@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]){
 
     mt19937 generator (stoi(argv[2]));
     chosen_word = word_bank[generator() % word_bank.size()];
-    guessed_word = "";
+    string guessed_word = "";
     vector<char> letters_used;
     int lives_left = 5;
     string guess;
@@ -73,14 +73,14 @@ int main(int argc, const char * argv[]){
         if (guess.size() == 1){
 
             // If guess is upper case
-            if (guess >= 'A' || guess < 'a'){
+            if (guess[0] >= 'A' || guess[0] < 'a'){
                 cout << "Changed " << guess;
                 guess = tolower(guess);
                 cout << " to " << guess << endl;
             }
             
             // If guess is out of range
-            if (guess < 'a' || guess > 'z') {
+            if (guess[0] < 'a' || guess[0] > 'z') {
                 lives_left--;
                 letters_used.push_back(guess);
                 continue;
