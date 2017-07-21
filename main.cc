@@ -9,13 +9,11 @@ int main(int argc, const char * argv[]){
     }
 
     string chosen_word;
+    string temp;
     vector<string> word_bank;
     ifstream word_file;
     word_file.open(argv[1]);
-    while (!word_file.eof){
-        string temp;
-        getline(word_file, temp);
-        
+    while (geline(word_file, temp)){
         // Check for >6 characters
         bool isValid = true;
         if (temp.size() < 6){
