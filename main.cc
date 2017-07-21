@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]){
         getline(word_file, temp);
         
         // Check for >6 characters
-        bool isValid true;
+        bool isValid = true;
         if (temp.size() < 6){
            isValid = false;
         }
