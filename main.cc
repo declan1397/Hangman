@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]){
     string temp;
     vector<string> word_bank;
     ifstream word_file;
-    word_file.open(argv[1]);
+    word_file.open(time(argv[1]));
     while (getline(word_file, temp)){
         // Check for >6 characters
         bool isValid = true;
