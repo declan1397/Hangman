@@ -4,6 +4,7 @@
 #include <random>
 #include <locale>
 #include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -77,7 +78,7 @@ int main(int argc, const char * argv[]){
             // If guess is upper case
             if (guess[0] >= 'A' || guess[0] < 'a'){
                 cout << "Changed " << guess;
-                guess = guess.tolower();
+                guess = tolower(guess);
                 cout << " to " << guess << endl;
             }
             
