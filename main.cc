@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]){
     mt19937 generator (stoi(argv[2]));
     chosen_word = word_bank[generator() % word_bank.size()];
 
-    cout << "Chosen_word" << endl;
+    cout << "Chosen_word: " << chosen_word << endl;
 
 
     return 0;
