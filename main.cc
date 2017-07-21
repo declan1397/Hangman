@@ -40,9 +40,15 @@ int main(int argc, const char * argv[]){
     }
     word_file.close();
 
-     
-    cout << "Filename: " << argv[1] << endl;
-    cout << "Seed: " << argv[2] << endl;
+    /******************/
+    // Play
+    /******************/
+
+    mt19937 generator (argv[2]);
+    chosen_word = word_bank[generator() % word_bank.size()];
+
+    cout << "Chosen_word" << endl;
+
 
     return 0;
 }
