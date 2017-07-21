@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]){
     vector<string> word_bank;
     ifstream word_file;
     word_file.open(argv[1]);
-    while (geline(word_file, temp)){
+    while (getline(word_file, temp)){
         // Check for >6 characters
         bool isValid = true;
         if (temp.size() < 6){
@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]){
 
         if (isValid){
             word_bank.push_back(temp);
-            cout << "temp\n";
+            cout << temp << "\n";
         }
 
         isValid = true;
