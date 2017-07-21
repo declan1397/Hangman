@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <random>
+#include <locale>
 
 using namespace std;
 
