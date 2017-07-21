@@ -3,6 +3,7 @@
 #include <fstream>
 #include <random>
 #include <locale>
+#include <string>
 
 using namespace std;
 
