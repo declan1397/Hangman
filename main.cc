@@ -109,7 +109,7 @@ int main(int argc, const char * argv[]){
                     bool foundIt = false;
                     cout << "In loop\n";
                     for (int j=0; j < chosen_word.size(); j++){
-                        if (chosen_word[j] == guess[0] || chosen_word[j] == (guess[0]+32)){
+                        if (chosen_word[j] == guess[0] || chosen_word[j] == (guess[0]-32)){
                             guessed_word[j] = guess[0];
                             letters_used.push_back(guess);
                             cout << "Found it!" << endl;
