@@ -5,6 +5,7 @@
 #include <locale>
 #include <algorithm>
 #include <string>
+#include <boost/algorithm/string.hpp>
 
 using namespace std;
 
@@ -131,10 +132,11 @@ int main(int argc, const char * argv[]){
         }
 
         // Check if game is won
-        if (guessed_word == chosen_word){
+        if (boost::iequals(guessed_word, chosen_word)){
             cout << "You WIN!  The word was \"" << chosen_word << "\".\n";
             break;
         }
+
 
     }
 
