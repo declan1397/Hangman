@@ -113,7 +113,7 @@ int main(int argc, const char * argv[]){
                     }
                     if (!foundIt){
                         lives_left--;
-                        letters_used.push_back(guess[0]);
+                        letters_used.push_back(guess);
                     }
                 }
 
