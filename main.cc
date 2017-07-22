@@ -117,7 +117,7 @@ int main(int argc, const char * argv[]){
 
         // Check if game is won
         if (guessed_word == chosen_word){
-            "You WIN!  The word was \"" << chosen_word << "\".\n";
+            cout << "You WIN!  The word was \"" << chosen_word << "\".\n";
             break;
         }
 
