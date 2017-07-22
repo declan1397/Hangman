@@ -105,7 +105,7 @@ int main(int argc, const char * argv[]){
                     for (int j=0; j < chosen_word.size(); j++){
                         if (chosen_word[j] == guess[0]){
                             guessed_word[j] = guess[0];
-                            letters_used.push_back(guess[0]);
+                            letters_used.push_back(guess);
                             cout << "Found it!" << endl;
                             foundIt = true;
                             break;
