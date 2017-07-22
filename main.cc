@@ -76,7 +76,7 @@ int main(int argc, const char * argv[]){
         if (guess.size() == 1){
 
             // If guess is upper case
-            if (guess[0] >= 'A' || guess[0] < 'a'){
+            if (guess[0] >= 'A' && guess[0] < 'a'){
                 cout << "Changed " << guess;
                 guess += 32;
                 cout << " to " << guess << endl;
