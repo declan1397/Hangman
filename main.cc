@@ -81,9 +81,7 @@ int main(int argc, const char * argv[]){
 
                 // If guess is upper case
                 if (guess[0] >= 'A' && guess[0] < 'a'){
-                    cout << "Changed " << guess;
                     guess[0] = guess[0] + 32;
-                    cout << " to " << guess << endl;
                 }
                 
                 // If guess is out of range
@@ -111,12 +109,10 @@ int main(int argc, const char * argv[]){
 
                     else {
                         bool foundIt = false;
-                        cout << "In loop\n";
                         for (int j=0; j < chosen_word.size(); j++){
-                            if (chosen_word[j] == guess[0] || chosen_word[j] == (guess[0]-32)){
+                            if ((chosen_word[j] == guess[0] || chosen_word[j] == (guess[0]-32)) && guess[0] != letters_used[letters_used.size()-1]){
                                 guessed_word[j] = guess[0];
                                 letters_used.push_back(guess);
-                                cout << "Found it!" << endl;
                                 foundIt = true;
                             }
                         }
@@ -153,7 +149,6 @@ int main(int argc, const char * argv[]){
         if (answer != 'y' && answer != 'Y'){
             break;
         }
-        cout << endl;
     }
 
 
