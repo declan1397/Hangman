@@ -48,9 +48,7 @@ int main(int argc, const char * argv[]){
     // Play
     /******************/
 
-    keepPlaying = true;
-
-    while (keepPlaying){
+    while (true){
 
         mt19937 generator (stoi(argv[2]));
         chosen_word = word_bank[generator() % word_bank.size()];
