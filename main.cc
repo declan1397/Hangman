@@ -110,7 +110,7 @@ int main(int argc, const char * argv[]){
                     else {
                         bool foundIt = false;
                         for (int j=0; j < chosen_word.size(); j++){
-                            if ((chosen_word[j] == guess[0] || chosen_word[j] == (guess[0]-32)) && guess != letters_used[letters_used.size()-1]){
+                            if ((chosen_word[j] == guess[0] || chosen_word[j] == (guess[0]-32)) && (letters_used.size() == 0 || guess != letters_used[letters_used.size()-1])){
                                 guessed_word[j] = guess[0];
                                 letters_used.push_back(guess);
                                 foundIt = true;
