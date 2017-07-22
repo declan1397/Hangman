@@ -114,7 +114,6 @@ int main(int argc, const char * argv[]){
                             letters_used.push_back(guess);
                             cout << "Found it!" << endl;
                             foundIt = true;
-                            break;
                         }
                     }
                     if (!foundIt){
