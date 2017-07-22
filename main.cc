@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]){
                     bool foundIt = false;
                     cout << "In loop\n";
                     for (int j=0; j < chosen_word.size(); j++){
-                        if (("" + chosen_word[j]) == guess){
+                        if (chosen_word[j] == guess[0]){
                             guessed_word[j] = guess[0];
                             cout << "Found it!" << endl;
                             foundIt = true;
