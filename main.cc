@@ -92,10 +92,16 @@ int main(int argc, const char * argv[]){
             // Guess is valid guess
             else {
                 cout << "Valid guess" << endl;
+                bool isRepeat = false;
                 // Check if guess has already been made
-                vector<string>::iterator i = find(letters_used.begin(), letters_used.end(), ("" + guess[0]));
+                for (int i=0; i < letters_used.size(); i++){
+                    if (letters_used[i] == guess){
+                        isRepeat = true;
+                        break;
+                    }
+                }
 
-                if (i != letters_used.end()) {
+                if (isRepeat){
                     cout << "You already guessed letter \"" << guess << "\".\n";
                 }
 
