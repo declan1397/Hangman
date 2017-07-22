@@ -93,7 +93,7 @@ int main(int argc, const char * argv[]){
             else {
                 cout << "Valid guess" << endl;
                 // Check if guess has already been made
-                vector<string>::iterator i = find(letters_used.begin(), letters_used.end(), ("" + guess));
+                vector<string>::iterator i = find(letters_used.begin(), letters_used.end(), guess[0]);
 
                 if (i != letters_used.end()) {
                     cout << "You already guessed letter \"" << guess << "\".\n";
