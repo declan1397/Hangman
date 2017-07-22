@@ -100,8 +100,8 @@ int main(int argc, const char * argv[]){
 
                 else {
                     for (int j=0; j < chosen_word.size(); j++){
-                        if (chosen_word[j] == ("" + guess)){
-                            guessed_word[j] = ("" + guess);
+                        if (("" + chosen_word[j]) == guess){
+                            guessed_word[j] = guess;
                             break;
                         }
                     }
