@@ -91,6 +91,7 @@ int main(int argc, const char * argv[]){
 
             // Guess is valid guess
             else {
+                cout << "Valid guess" << endl;
                 // Check if guess has already been made
                 vector<string>::iterator i = find(letters_used.begin(), letters_used.end(), ("" + guess));
 
@@ -99,11 +100,17 @@ int main(int argc, const char * argv[]){
                 }
 
                 else {
+                    bool foundIt = false;
                     for (int j=0; j < chosen_word.size(); j++){
                         if (("" + chosen_word[j]) == guess){
                             guessed_word[j] = guess[0];
+                            cout << "Found it!" << endl;
+                            foundIt = true;
                             break;
                         }
+                    }
+                    if (!foundIt){
+                        lives_left--;
                     }
                 }
 
