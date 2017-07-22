@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]){
     mt19937 generator (stoi(argv[2]));
     chosen_word = word_bank[generator() % word_bank.size()];
     string guessed_word = "";
-    vector<char> letters_used;
+    vector<string> letters_used;
     int lives_left = 5;
     string guess;
 
